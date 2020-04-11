@@ -5,6 +5,11 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import sys
 
+# Error handling
+if len(sys.argv) != 3: 
+	print('Incorrect number of system arguments provided! Provide the name of the URL to be scraped and the name of the outfile.')
+	sys.exit(1)
+
 URL = sys.argv[1]
 nameOut = sys.argv[2]
 
